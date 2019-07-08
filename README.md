@@ -14,6 +14,7 @@
 
 ## Vue 系列目录
 
+1. [Vue项目Webpack优化实践，构建效率提高50%](https://github.com/fengshi123/blog/issues/2)
 
 ## JavaScript 系列目录
 
