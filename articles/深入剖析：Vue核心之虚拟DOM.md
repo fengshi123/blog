@@ -941,31 +941,27 @@ function sameVnode (a, b) {
 
 （2.1）首先从第一个节点开始比较，不管是 `oldCh` 还是 `newCh` 的起始或者终止节点都不存在 `sameVnode` ，同时节点属性中是不带 `key `标记的，因此第一轮的 `diff` 完后，`newCh `的 `startVnode` 被添加到 `oldStartVnode`的前面，同时 `newStartIndex `前移一位；   
 
-![11.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/11.png?raw=true) 
-
-![å¾çæè¿°](https://segmentfault.com/img/bVQu4K?w=1402&h=752)  
+![11.jpg](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/11.jpg?raw=true)    
 
 （2.2）第二轮的 `diff `中，满足 `sameVnode(oldStartVnode, newStartVnode)`，因此对这2个 `vnode` 进行`diff`，最后将 `patch` 打到 `oldStartVnode` 上，同时 `oldStartVnode `和 `newStartIndex` 都向前移动一位 ；
 
-![12.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/12.png?raw=true)
-
-![å¾çæè¿°](https://segmentfault.com/img/bVQu9d?w=1362&h=736) 
+![12.jpg](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/12.jpg?raw=true)  
 
 （2.3）第三轮的 `diff` 中，满足 `sameVnode(oldEndVnode, newStartVnode)`，那么首先对  `oldEndVnode`和`newStartVnode` 进行 `diff`，并对 `oldEndVnode `进行 `patch`，并完成  `oldEndVnode` 移位的操作，最后`newStartIndex `前移一位，`oldStartVnode` 后移一位； 
 
-![å¾çæè¿°](https://segmentfault.com/img/bVQu44?w=1342&h=820) 
+![13.jpg](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/13.jpg?raw=true)  
 
 （2.4）第四轮的 `diff `中，过程同步骤3； 
 
-![å¾çæè¿°](https://segmentfault.com/img/bVQu5b?w=1322&h=1012) 
+![14.jpg](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/14.jpg?raw=true)  
 
   （2.5）第五轮的 `diff` 中，同过程1； 
 
-![å¾çæè¿°](https://segmentfault.com/img/bVQu5c?w=1336&h=1090)  
+![15.jpg](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/15.jpg?raw=true)   
 
 （2.6）遍历的过程结束后，`newStartIdx > newEndIdx`，说明此时 `oldCh` 存在多余的节点，那么最后就需要将这些多余的节点删除。 
 
-![å¾çæè¿°](https://segmentfault.com/img/bVQu9m?w=1344&h=1134) 
+![16g](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/16.jpg?raw=true)  
 
 **（3）有 `key` 的 `diff` 流程**
 
@@ -980,23 +976,23 @@ function sameVnode (a, b) {
 
 （3.1）首先从第一个节点开始比较，不管是 `oldCh` 还是 `newCh` 的起始或者终止节点都不存在 `sameVnode`，但节点属性中是带 `key` 标记的， 然后在 `oldKeyToIndx` 中找到对应的节点，这样第一轮 `diff` 过后 `oldCh` 上的`B节点`被删除了，但是 `newCh` 上的`B节点`上 `elm` 属性保持对 `oldCh` 上 `B节点` 的`elm`引用。  
 
-![å¾çæè¿°](https://segmentfault.com/img/bVQu6N?w=1296&h=652)  
+![17.jpg](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/17.jpg?raw=true)   
 
 （3.2）第二轮的 `diff` 中，满足 `sameVnode(oldStartVnode, newStartVnode)`，因此对这2个 `vnode` 进行`diff`，最后将 `patch` 打到 `oldStartVnode`上，同时 `oldStartVnode` 和 `newStartIndex` 都向前移动一位 ；
 
-   ![å¾çæè¿°](https://segmentfault.com/img/bVQu6Q?w=1348&h=694) 
+![18.jpg](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/18.jpg?raw=true)  
 
 （3.3）第三轮的 `diff `中，满足 `sameVnode(oldEndVnode, newStartVnode)`，那么首先对 `oldEndVnode` 和`newStartVnode` 进行 `diff`，并对 `oldEndVnode` 进行 `patch`，并完成 `oldEndVnode` 移位的操作，最后`newStartIndex` 前移一位，`oldStartVnode `后移一位； 
 
-![å¾çæè¿°](https://segmentfault.com/img/bVQu6U?w=1348&h=800) 
+![19.jpg](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/19.jpg?raw=true)  
 
 （3.4）第四轮的`diff`中，过程同步骤2； 
 
-![å¾çæè¿°](https://segmentfault.com/img/bVQvbx?w=1308&h=1006)
+![20.jpg](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/20.jpg?raw=true) 
 
-  （3.5）第五轮的`diff`中，因为此时 `oldStartIndex` 已经大于 `oldEndIndex`，所以将剩余的 `Vnode` 队列插入队列最后。 
+  （3.5）第五轮的`diff`中，因为此时 `oldStartIndex` 已经大于 `oldEndIndex`，所以将剩余的 `Vnode` 队列插入队列最后。
 
- ![å¾çæè¿°](https://segmentfault.com/img/bVQu6Y?w=1272&h=1098) 
+![21.jpg](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/21.jpg?raw=true)   
 
 ### 3.3、`patch` 过程
 
@@ -1028,7 +1024,7 @@ export function removeChild (node: Node, child: Node) {
 
 通过前三小节简析，我们从主线上把模板和数据如何渲染成最终的 `DOM` 的过程分析完毕了，我们可以通过下图更直观地看到从初始化 `Vue` 到最终渲染的整个过程。 
 
-![new-vue](F:\黄波\掘金分享文章的截图\虚拟dom\new-vue.png) 
+![22.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/22.png?raw=true)  
 
 
 
