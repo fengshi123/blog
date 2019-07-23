@@ -12,7 +12,7 @@
 
 本节我们主要介绍真实   `DOM` 的解析过程，通过介绍其解析过程以及存在的问题，从而引出为什么需要虚拟`DOM`。一图胜千言，如下图为 `webkit` 渲染引擎工作流程图
 
-![4345378-b7ccad3bc808783f](F:\黄波\掘金分享文章的截图\虚拟dom\4345378-b7ccad3bc808783f.webp)
+![1.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/1.png?raw=true)
 
 所有的浏览器渲染引擎工作流程大致分为5步：创建        `   DOM` 树 —> 创建 `Style Rules` -> 构建 `Render` 树 —> 布局 `Layout` -—> 绘制 `Painting`。
 
@@ -160,19 +160,19 @@ document.body.appendChild(ulRoot);
 
 这样，页面 `body` 里面就有真正的 `DOM` 结构，效果如下图所示：
 
-![1563292965051](F:\黄波\掘金分享文章的截图\虚拟dom\1563292965051.png) 
+![2.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/2.png?raw=true) 
 
 #### 2.2.2、比较两棵虚拟 `DOM` 树的差异 — `diff` 算法
 
 `diff` 算法用来比较两棵 `Virtual DOM` 树的差异，如果需要两棵树的完全比较，那么 `diff` 算法的时间复杂度为`O(n^3)`。但是在前端当中，你很少会跨越层级地移动 `DOM` 元素，所以 `Virtual DOM` 只会对同一个层级的元素进行对比，如下图所示， `div` 只会和同一层级的 `div` 对比，第二层级的只会跟第二层级对比，这样算法复杂度就可以达到 `O(n)`。
 
-![compare-in-level](F:\黄波\掘金分享文章的截图\虚拟dom\compare-in-level.png) 
+![3.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/3.png?raw=true)  
 
 **（1）深度优先遍历，记录差异**
 
 在实际的代码中，会对新旧两棵树进行一个深度优先的遍历，这样每个节点都会有一个唯一的标记： 
 
-![dfs-walk](http://livoras.github.io/blog/virtual-dom/dfs-walk.png)   
+![4.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/4.png?raw=true)   
 
 在深度优先遍历的时候，每遍历到一个节点就把该节点和新的的树进行对比。如果有差异的话就记录到一个对象里面。 
 
@@ -248,11 +248,11 @@ var TEXT = 3 // 文本内容改变
 
 定义：对于两个字符串 `a、b`，则他们的 `Levenshtein Distance` 为：
 
-![1563418138665](F:\黄波\掘金分享文章的截图\虚拟dom\1563418138665.png)  
+![5.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/5.png?raw=true) 
 
  示例：字符串 `a` 和 `b`，`a=“abcde” ，b=“cabef”`，根据上面给出的计算公式，则他们的 `Levenshtein Distance` 的计算过程如下：
 
-![1563419029430](F:\黄波\掘金分享文章的截图\虚拟dom\1563419029430.png) 
+![6.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/6.png?raw=true) 
 
 本文的 `demo` 使用插件 `list-diff2` 算法进行比较，该算法的时间复杂度伟 `O(n*m)`，虽然该算法并非最优的算法，但是用于对于 `dom` 元素的常规操作是足够的。该算法具体的实现过程这里不再详细介绍，该算法的具体介绍可以参照：<https://github.com/livoras/list-diff> 
 
@@ -284,7 +284,7 @@ console.log('patches:',patches);
 
 我们查看输出的两个虚拟 `DOM` 对象之间的差异对象如下图所示，我们能通过差异对象得到，两个虚拟 `DOM` 对象之间进行了哪些变化，从而根据这个差异对象（`patches`）更改原先的真实 `DOM` 结构，从而将页面的 `DOM` 结构进行更改。
 
-![1563459327369](F:\黄波\掘金分享文章的截图\虚拟dom\1563459327369.png) 
+![7](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/7.png?raw=true)  
 
 #### 2.2.3、将两个虚拟 `DOM` 对象的差异应用到真正的 `DOM` 树
 
@@ -352,7 +352,7 @@ function applyPatches (node, currentPatches) {
 
 通过将第 2.2.2 得到的两个 `DOM` 对象之间的差异，应用到第一个（原先）`DOM` 结构中，我们可以看到 `DOM` 结构进行了预期的变化，如下图所示：
 
-![1563460322323](F:\黄波\掘金分享文章的截图\虚拟dom\1563460322323.png) 
+![8.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/8.png?raw=true)     
 
 ### 2.3、结语
 
@@ -374,7 +374,7 @@ function applyPatches (node, currentPatches) {
 
 - 比较两棵虚拟 `DOM` 树的差异 — `diff.js`
 
-  ![1563459327369](C:\Users\fengshi\AppData\Local\Temp\1563459327369.png) 
+  ![9.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/9.png?raw=true)  
 
 - 将两个虚拟 `DOM` 对象的差异应用到真正的 `DOM` 树 — `patch.js`
 
@@ -699,9 +699,7 @@ export function _createElement (
 
 我们打印出其对应的 `VNode` 表示：
 
-![1563778742500](F:\黄波\掘金分享文章的截图\虚拟dom\1563778742500.png) 
-
-
+![10.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/10.png?raw=true)  
 
 ### 3.2、`diff` 过程
 
@@ -943,9 +941,13 @@ function sameVnode (a, b) {
 
 （2.1）首先从第一个节点开始比较，不管是 `oldCh` 还是 `newCh` 的起始或者终止节点都不存在 `sameVnode` ，同时节点属性中是不带 `key `标记的，因此第一轮的 `diff` 完后，`newCh `的 `startVnode` 被添加到 `oldStartVnode`的前面，同时 `newStartIndex `前移一位；   
 
+![11.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/11.png?raw=true) 
+
 ![å¾çæè¿°](https://segmentfault.com/img/bVQu4K?w=1402&h=752)  
 
 （2.2）第二轮的 `diff `中，满足 `sameVnode(oldStartVnode, newStartVnode)`，因此对这2个 `vnode` 进行`diff`，最后将 `patch` 打到 `oldStartVnode` 上，同时 `oldStartVnode `和 `newStartIndex` 都向前移动一位 ；
+
+![12.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/12.png?raw=true)
 
 ![å¾çæè¿°](https://segmentfault.com/img/bVQu9d?w=1362&h=736) 
 
