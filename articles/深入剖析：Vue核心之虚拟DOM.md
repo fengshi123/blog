@@ -119,7 +119,7 @@ var ul = el('div',{id:'virtual-dom'},[
 
 现在 `ul` 就是我们用  `JavaScript` 对象表示的 `DOM` 结构，我们输出查看 `ul` 对应的数据结构如下：
 
-![1_2.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/1_2.png?raw=true) 
+![12.png](https://github.com/fengshi123/blog/blob/master/assets/virtual_dom/1_2.png?raw=true) 
 
 **（2）渲染用 `JS` 表示的 `DOM` 对象**
 
