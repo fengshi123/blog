@@ -800,7 +800,13 @@ addDep (dep: Dep) {
 
 这里会对于 `Watcher` 的不同状态，会执行不同的更新逻辑。
 
- 
+###  6.4、Vue 数据双向绑定原理图
+
+以上主要分析了 Vue 数据双向绑定的关键代码，其原理图可以表示如下：
+
+![4.png](https://github.com/fengshi123/blog/blob/master/assets/mvvm/4.png?raw=true) 
+
+
 
 ## 七、总结
 
