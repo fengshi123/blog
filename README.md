@@ -17,12 +17,13 @@
 1. [Vue项目Webpack优化实践，构建效率提高50%](https://github.com/fengshi123/blog/issues/2)
 2. [Vue SSR 踩坑之旅](https://github.com/fengshi123/blog/issues/3)
 3. [深入剖析：Vue核心之虚拟DOM](https://github.com/fengshi123/blog/issues/10)
+4. [0 到 1 掌握：Vue 核心之数据双向绑定](https://github.com/fengshi123/blog/issues/11)
 
 ## JavaScript/ES6 系列目录
 1. [编写高性能的JavaScript](https://github.com/fengshi123/blog/issues/6)
 
 ## CSS/SCSS 系列目录
-1. [编写高性能的JavaScript](https://github.com/fengshi123/blog/issues/8)
+1. [SCSS — 缩减50%的样式代码](https://github.com/fengshi123/blog/issues/8)
 
 ## Node.js 系列目录
 1. [Express.js 解析 Post 数据类型的正确姿势](https://github.com/fengshi123/blog/issues/4)
@@ -33,7 +34,7 @@
 
 ## 工具系列目录
 1. [node版本管理器NVM ](https://github.com/fengshi123/blog/issues/9)
- 
+
 
 ## 注意
 

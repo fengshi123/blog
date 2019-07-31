@@ -37,6 +37,8 @@
 
 ![3.png](https://github.com/fengshi123/blog/blob/master/assets/mvvm/3.png?raw=true) 
 
+该实例的源码已经放到 github 上面：<https://github.com/fengshi123/mvvm_example> 。
+
 ## 二、监听器 Observer 实现
 
 监听器 `Observer` 的实现，主要是指让数据对象变得“可观测”，即每次数据读或写时，我们能感知到数据被读取了或数据被改写了。要使数据变得“可观测”，`Vue 2.0` 源码中用到 `Object.defineProperty()`  来劫持各个数据属性的 `setter / getter`，`Object.defineProperty` 方法，在 MDN 上是这么定义的：
@@ -137,7 +139,7 @@ Object.defineProperty(person,'name',{
 
 我们通过 `object.defineProperty()` 方法给  `person` 的 `name` 属性定义了 `get()` 和`set()`进行拦截，每当该属性进行读或写操作的时候就会触发`get()`和`set()` ，这样，当对象的属性被读写时，我们就能感知到了。测试结果图如下所示：
 
-![1564302855198](C:\Users\fengshi\AppData\Local\Temp\1564302855198.png) 
+![3_2.png](https://github.com/fengshi123/blog/blob/master/assets/mvvm/3_2.png?raw=true) 
 
 **（3）改进方法**
 
@@ -352,7 +354,7 @@ compileText: function(node, exp) {
 
 ### 5.2、简单实现一个 Vue 实例
 
-完成监听器 `Observer` 、订阅器 `Dep` 、订阅者 `Watcher` 和解析器 `Compile` 的实现，我们就可以模拟初始化一个`Vue` 实例，来检验以上的理论的可行性了。我们通过以下代码初始化一个 `Vue` 实例：
+完成监听器 `Observer` 、订阅器 `Dep` 、订阅者 `Watcher` 和解析器 `Compile` 的实现，我们就可以模拟初始化一个`Vue` 实例，来检验以上的理论的可行性了。我们通过以下代码初始化一个 `Vue` 实例，该实例的源码已经放到 github 上面：<https://github.com/fengshi123/mvvm_example> ，有兴趣的可以 git clone：
 
 ```javascript
 <body>
@@ -804,7 +806,7 @@ addDep (dep: Dep) {
 
 以上主要分析了 Vue 数据双向绑定的关键代码，其原理图可以表示如下：
 
-![4.png](https://github.com/fengshi123/blog/blob/master/assets/mvvm/4.png?raw=true) 
+![4.png](https://github.com/fengshi123/blog/blob/master/assets/mvvm/4.png?raw=true)  
 
 
 
