@@ -147,8 +147,8 @@ Object.defineProperty(person,'name',{
 
 ```javascript
 /**
-  * 循环遍历数据对象的每个属性
-  */
+ * 循环遍历数据对象的每个属性
+ */
 function observable(obj) {
     if (!obj || typeof obj !== 'object') {
         return;
@@ -242,8 +242,8 @@ defineReactive: function(data, key, val) {
 		enumerable: true,
 		configurable: true,
 		get: function getter () {
-			if (Dep.globalWatcher) {
-				dep.addWatcher(Dep.globalWatcher);
+			if (Dep.target) {
+				dep.addSub(Dep.target);
 			}
 			return val;
 		},

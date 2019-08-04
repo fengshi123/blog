@@ -17,7 +17,8 @@
 1. [Vue项目Webpack优化实践，构建效率提高50%](https://github.com/fengshi123/blog/issues/2)
 2. [Vue SSR 踩坑之旅](https://github.com/fengshi123/blog/issues/3)
 3. [深入剖析：Vue核心之虚拟DOM](https://github.com/fengshi123/blog/issues/10)
-4. [0 到 1 掌握：Vue 核心之数据双向绑定](https://github.com/fengshi123/blog/issues/11)
+4. [深度剖析：Vue 核心之数据双向绑定](https://github.com/fengshi123/blog/issues/11)
+5. [深入剖析：前端路由原理](https://github.com/fengshi123/blog/issues/12)
 
 ## JavaScript/ES6 系列目录
 1. [编写高性能的JavaScript](https://github.com/fengshi123/blog/issues/6)
