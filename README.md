@@ -11,6 +11,7 @@
 ## 前端总结系列目录
 
 1. [前端代码评审 Checklist 清单](https://github.com/fengshi123/blog/issues/1)
+2. [React 代码规范](https://github.com/fengshi123/blog/issues/16)
 
 ## Vue 系列目录
 
