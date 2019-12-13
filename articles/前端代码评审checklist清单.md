@@ -452,7 +452,7 @@ scss局部文件的文件名以下划线开头。这样，scss就不会在编译
 
 推荐：
 
-![1562133043097](C:\Users\fengshi\AppData\Local\Temp\1562133043097.png)
+![1.png](https://github.com/fengshi123/blog/blob/master/assets/checklist/1.png?raw=true) 
 
 #### 4.4、父选择器标识符 & 实现BEM 命令规范
 
