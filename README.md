@@ -41,7 +41,7 @@
 
 ## Node.js 系列目录
 1. [Express.js 解析 Post 数据类型的正确姿势](https://github.com/fengshi123/blog/issues/4)
-2. [搭建一个中级应用的 Express 项目框架](https://github.com/fengshi123/blog/issues/5)
+2. [一个开箱即用，功能完善的 Express 项目](https://github.com/fengshi123/blog/issues/5)
 
 ## 网络请求系列目录
 1. [深入理解HTTP缓存机制及原理](https://github.com/fengshi123/blog/issues/7)
