@@ -15,7 +15,7 @@
 
 ## 架构系列目录
 
-1. [微前端探索](https://github.com/fengshi123/blog/issues/20)
+1. [微前端探索](https://github.com/fengshi123/blog/issues/21)
 
 ## Vue 系列目录
 
@@ -45,6 +45,7 @@
 1. [Express.js 解析 Post 数据类型的正确姿势](https://github.com/fengshi123/blog/issues/4)
 2. [一个开箱即用，功能完善的 Express 项目](https://github.com/fengshi123/blog/issues/5)
 3. [pm2 实践指南](https://github.com/fengshi123/blog/issues/19)
+4. [玩转 node 子进程 child_process](https://github.com/fengshi123/blog/issues/22)
 
 ## 网络请求系列目录
 1. [深入理解 HTTP 缓存机制及原理](https://github.com/fengshi123/blog/issues/7)
