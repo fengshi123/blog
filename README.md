@@ -37,15 +37,15 @@
 
 ## React 系列目录
 
-1、[一文归纳 React Hooks 常用场景](https://github.com/fengshi123/blog/issues/23)
+  1.[一文归纳 React Hooks 常用场景](https://github.com/fengshi123/blog/issues/23)
 
 
 
 ## 移动端目录
 
-1.[Weex 实践总结（vue 技术栈的童鞋跨平台开发首选吗？）](https://github.com/fengshi123/blog/issues/15)
+  1.[Weex 实践总结（vue 技术栈的童鞋跨平台开发首选吗？）](https://github.com/fengshi123/blog/issues/15)
 
-2.[React Native 实践总结](https://github.com/fengshi123/blog/issues/17)
+  2.[React Native 实践总结](https://github.com/fengshi123/blog/issues/17)
 
 
 
