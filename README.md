@@ -20,6 +20,7 @@
 ## 架构系列目录
 
 1. [微前端探索](https://github.com/fengshi123/blog/issues/21)
+2. [一文掌握 npm 包发布与管理](https://github.com/fengshi123/blog/issues/25)
 
 
 
