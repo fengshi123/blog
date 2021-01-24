@@ -39,7 +39,8 @@
 ## React 系列目录
 
 1.   [一文归纳 React Hooks 常用场景](https://github.com/fengshi123/blog/issues/23)
-2.   [一文搞定 React 路由](https://github.com/fengshi123/blog/issues/24)
+2.   [一文搞定常用的自定义 React Hooks](https://github.com/fengshi123/blog/issues/26)
+3.   [一文搞定 React 路由](https://github.com/fengshi123/blog/issues/24)
 
 
 
