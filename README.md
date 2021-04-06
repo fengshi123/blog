@@ -45,6 +45,14 @@
 
 
 
+## webpack 系列目录
+
+1. [Webpack 再深入再总结 ](https://github.com/fengshi123/blog/issues/18)
+2. [Webpack 核心模块之 Tapable 解析 ](https://github.com/fengshi123/blog/issues/28)
+3. [Webpack-chain 从入门到深入 ](https://github.com/fengshi123/blog/issues/29)
+
+
+
 ## 移动端目录
 
 1.   [Weex 实践总结（vue 技术栈的童鞋跨平台开发首选吗？）](https://github.com/fengshi123/blog/issues/15)
@@ -82,7 +90,6 @@
 ## 工具系列目录
 
 1. [node 版本管理器 NVM ](https://github.com/fengshi123/blog/issues/9)
-2. [Webpack 再深入再总结 ](https://github.com/fengshi123/blog/issues/18)
 
 
 
