@@ -78,6 +78,7 @@
 2. [一个开箱即用，功能完善的 Express 项目](https://github.com/fengshi123/blog/issues/5)
 3. [pm2 实践指南](https://github.com/fengshi123/blog/issues/19)
 4. [玩转 node 子进程 child_process](https://github.com/fengshi123/blog/issues/22)
+5. [从零到一编写 IOC 容器](https://github.com/fengshi123/blog/issues/30)
 
 
 
