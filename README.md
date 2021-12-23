@@ -77,8 +77,10 @@
 1. [Express.js 解析 Post 数据类型的正确姿势](https://github.com/fengshi123/blog/issues/4)
 2. [一个开箱即用，功能完善的 Express 项目](https://github.com/fengshi123/blog/issues/5)
 3. [pm2 实践指南](https://github.com/fengshi123/blog/issues/19)
-4. [玩转 node 子进程 child_process](https://github.com/fengshi123/blog/issues/22)
-5. [从零到一编写 IOC 容器](https://github.com/fengshi123/blog/issues/30)
+4. [深入理解异步 I/O 原理](https://github.com/fengshi123/blog/issues/31)
+5. [玩转进程 ](https://github.com/fengshi123/blog/issues/22)
+6. [玩转集群 ](https://github.com/fengshi123/blog/issues/32)
+7. [从零到一编写 IOC 容器](https://github.com/fengshi123/blog/issues/30)
 
 
 
