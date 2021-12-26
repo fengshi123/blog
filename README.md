@@ -55,8 +55,11 @@
 
 ## 移动端目录
 
-1.   [Weex 实践总结（vue 技术栈的童鞋跨平台开发首选吗？）](https://github.com/fengshi123/blog/issues/15)
-2.   [React Native 实践总结](https://github.com/fengshi123/blog/issues/17)
+1.   [移动端适配方案指南](https://github.com/fengshi123/blog/issues/35)
+2.   [移动端响应式设计](https://github.com/fengshi123/blog/issues/33)
+3.   [iPhoneX 适配方案](https://github.com/fengshi123/blog/issues/33)
+4.   [Weex 实践总结（vue 技术栈的童鞋跨平台开发首选吗？）](https://github.com/fengshi123/blog/issues/15)
+5.   [React Native 实践总结](https://github.com/fengshi123/blog/issues/17)
 
 
 
